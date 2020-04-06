@@ -1,14 +1,9 @@
-(done) JJP = [JJ,QF(when no JJ),QO(when no JJ),QC(when no JJ)]
-(done) VGF = [VM]
-(done) VGNF = [VM]
-(done) VGNN = [VM]
-(done) NEGP = [NEG , RP(when alone)]
-(done) RBP = [RB , NN(when no RB) , WQ(when no RB)]
-(done) BLK = [SYM,UNK(when no SYM),RP(when no SYM),INJ(when no SYM)]
-(done) CCP = [CC, SYM(when alone)]
-(done) NP = [NN(1) , PRP(1) , NNP(1), QC(2) , QF(2), QO(2) , NST(3) , WQ(4)]
-
-
-
-
-FRAGP = [PSP,NNP(when alone), DEM(when alone)]
+JJP = [JJ,QF(when no JJ),QO(when no JJ),QC(when no JJ)]
+VGF = [VM]
+VGNF = [VM]
+VGNN = [VM]
+NEGP = [NEG]
+RBP = [RB , NN(when no RB) , WQ(when no RB)]
+BLK = [SYM,UNK(when no SYM),RP(when no SYM),INJ(when no SYM)]
+CCP = [CC, SYM(when alone)]
+NP = [NN(1) , PRP(1) , NNP(1), QC(2) , QF(2), QO(2) , NST(3) , WQ(4)]

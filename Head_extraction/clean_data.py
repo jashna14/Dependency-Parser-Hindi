@@ -1,4 +1,4 @@
-NULL_index = ['282']
+NULL_index = ['2849', '9481', '12757', '12989']
 
 import sys
 import re
