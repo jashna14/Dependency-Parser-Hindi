@@ -1,0 +1,63 @@
+<Sentence id='1'>
+यह एशिया की सबसे बड़ी मस्जिदों में से एक है । 
+यह एशिया का सबसे बड़ा मस्जिद में से एक है । 
+DEM NNP PSP INTF JJ NN PSP PSP QC VM SYM 
+एशिया मस्जिदों एक है । 
+एशिया मस्जिद एक है । 
+NP NP NP VGF BLK 
+NNP NN QC VM SYM 
+NP NP2 NP3 VGF BLK 
+H  एशिया  एशिया  NP  NNP  NP  r6  NP2    ;  H  मस्जिदों  मस्जिद  NP  NN  NP2  k7  VGF    ;  R  ;  r6  
+H  मस्जिदों  मस्जिद  NP  NN  NP2  k7  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k7  
+H  एक  एक  NP  QC  NP3  k1  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
+H  है  है  VGF  VM  VGF  NULL  ROOT    ;  ROOT  ;  L  ;  ROOT  
+H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  rsym  
+</Sentence>
+<Sentence id='2'>
+इसे नवाब शाहजेहन ने बनवाया था । 
+यह नवाब शाहजेहन ने बनवा था । 
+PRP NNC NNP PSP VM VAUX SYM 
+इसे शाहजेहन बनवाया । 
+यह शाहजेहन बनवा । 
+NP NP VGF BLK 
+PRP NNP VM SYM 
+NP NP2 VGF BLK 
+H  इसे  यह  NP  PRP  NP  k2  VGF    ;  H  बनवाया  बनवा  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k2  
+H  शाहजेहन  शाहजेहन  NP  NNP  NP2  k1  VGF    ;  H  बनवाया  बनवा  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
+H  बनवाया  बनवा  VGF  VM  VGF  NULL  ROOT    ;  ROOT  ;  L  ;  ROOT  
+H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  H  बनवाया  बनवा  VGF  VM  VGF  NULL  ROOT    ;  L  ;  rsym  
+</Sentence>
+<Sentence id='3'>
+इसके चारों ओर दीवार है और बीच में एक तालाब है । 
+यह चार ओर दीवार है और बीच में एक तालाब है । 
+PRP QC NST NN VM CC NST PSP QC NN VM SYM 
+इसके चारों दीवार है और बीच तालाब है । 
+यह चार दीवार है और बीच तालाब है । 
+NP NP NP VGF CCP NP NP VGF BLK 
+PRP QC NN VM CC NST NN VM SYM 
+NP NP2 NP3 VGF CCP NP4 NP5 VGF2 BLK 
+H  इसके  यह  NP  PRP  NP  r6  NP2    ;  H  चारों  चार  NP  QC  NP2  rd  VGF    ;  R  ;  r6  
+H  चारों  चार  NP  QC  NP2  rd  VGF    ;  H  है  है  VGF  VM  VGF  ccof  CCP    ;  R  ;  rd  
+H  दीवार  दीवार  NP  NN  NP3  k1  VGF    ;  H  है  है  VGF  VM  VGF  ccof  CCP    ;  R  ;  k1  
+H  है  है  VGF  VM  VGF  ccof  CCP    ;  H  और  और  CCP  CC  CCP  NULL  ROOT    ;  R  ;  ccof  
+H  और  और  CCP  CC  CCP  NULL  ROOT    ;  ROOT  ;  L  ;  ROOT  
+H  बीच  बीच  NP  NST  NP4  k7p  VGF2    ;  H  है  है  VGF  VM  VGF2  ccof  CCP    ;  R  ;  k7p  
+H  तालाब  तालाब  NP  NN  NP5  k1  VGF2    ;  H  है  है  VGF  VM  VGF2  ccof  CCP    ;  R  ;  k1  
+H  है  है  VGF  VM  VGF2  ccof  CCP    ;  H  और  और  CCP  CC  CCP  NULL  ROOT    ;  L  ;  ccof  
+H  ।  ।  BLK  SYM  BLK  rsym  CCP    ;  H  और  और  CCP  CC  CCP  NULL  ROOT    ;  L  ;  rsym  
+</Sentence>
+<Sentence id='4'>
+इसका प्रवेश द्वार दो मंजिला है । 
+यह प्रवेश द्वार दो मंजिला है । 
+PRP NNC NN QC JJ VM SYM 
+इसका द्वार मंजिला है । 
+यह द्वार मंजिला है । 
+NP NP JJP VGF BLK 
+PRP NN JJ VM SYM 
+NP NP2 JJP VGF BLK 
+H  इसका  यह  NP  PRP  NP  r6  NP2    ;  H  द्वार  द्वार  NP  NN  NP2  k1  VGF    ;  R  ;  r6  
+H  द्वार  द्वार  NP  NN  NP2  k1  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
+H  मंजिला  मंजिला  JJP  JJ  JJP  k1s  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1s  
+H  है  है  VGF  VM  VGF  NULL  ROOT    ;  ROOT  ;  L  ;  ROOT  
+H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  rsym  
+</Sentence>
