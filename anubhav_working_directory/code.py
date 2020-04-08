@@ -15,7 +15,7 @@ def checker(buffer,local_dependency,idx,hold,stack_top):
 	flag=0
 	for j in range(len(local_dependency)):
 		if buffer[1][idx]==local_dependency[j][2] and local_dependency[j][3]=="R":
-			if stack_top==local_dependency[j][2]:
+			if stack_top==local_dependency[j][1]:
 				if j!=hold:
 					flag=1
 					break
@@ -70,22 +70,25 @@ with open(sys.argv[1], 'r') as f:
 			print(stack)
 			while condition==0:
 				hold=0
+				stack_top=stack[len(stack)-1]
 				for j in range(len(local_dependency)):
-
 					if buffer[1][pointer_buffer]==local_dependency[j][2] and local_dependency[j][3]=="R":
-						stack_top=stack[len(stack)-1]
-						hold=j
-						k=checker(buffer,local_dependency,pointer_buffer,hold,stack_top)
-						if k==1:
-							temp=[]
-							temp.append(buffer[0])
-							temp.append(buffer[1][pointer_buffer])
-							temp.append(local_dependency[j][2])
-							temp.append("l")
-							temp2=copy.copy(temp)
-							print(1)
-							stack.pop()
-							pointer_buffer+=1
+						if stack_top==local_dependency[j][1]:
+							hold=j
+							k=checker(buffer,local_dependency,pointer_buffer,hold,stack_top)
+							if k==1:
+								temp=[]
+								temp.append(buffer[0])
+								temp.append(buffer[1][pointer_buffer])
+								temp.append(local_dependency[j][2])
+								temp.append("l")
+								temp2=copy.copy(temp)
+								print(temp2)
+								stack.pop()
+								break
+				for j in range(len(local_dependency)):
+					
+
 
 			# print(buffer)
 			# print(local_dependency)
