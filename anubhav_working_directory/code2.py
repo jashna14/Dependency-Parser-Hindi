@@ -17,7 +17,7 @@ def leftarc(node1,node2,stack,reln):
         tempo.append(node2)
         tempo.append("l")
         tempo.append(reln)
-        temp1=copy.copy(tempo)
+        temp1=copy.copy(tempo) 
         dependencies.append(temp1)
         stack.pop()
         return stack
@@ -61,9 +61,20 @@ def predict (stack):
     if len(buffer)>0:
         length=len(buffer)
         buff_top=buffer[length-1]
+        #print(stack_top)
+        #print(buff_top)
     
     #print(buffer)
     for i in tags:
+        stack_top=-1
+        if len(stack)>0:
+            stack_top=stack[len(stack)-1]
+
+        buff_top=-1
+        if len(buffer)>0:
+            length=len(buffer)
+            buff_top=buffer[length-1]
+
         if stack_top!=-1 and stack_top==i[0]:
             if buff_top==i[1] and i[2]=='R':
                 flag_left=0
@@ -74,13 +85,15 @@ def predict (stack):
                         else :
                             flag_left=1
                             break
+                #print(flag_left)
                 if flag_left==0:
                     flag=1
-                    #print(flag)
+                    print(flag)
                     stack=leftarc(i[0],i[1],stack,i[3])
                     return flag,stack
+        
 
-        if buff_top!=-1 and stack_top==i[0]:
+        elif buff_top!=-1 and stack_top==i[0]:
             if buff_top==i[1] and i[2]=='L':
                 flag_right=0
                 for j in tags:
@@ -92,17 +105,18 @@ def predict (stack):
                             break
                 if flag_right==0:
                     flag=2
-                   # print(flag)
+                    print(flag)
                     stack=rightarc(i[0],i[1],stack,i[3])
                     return flag,stack
-
-        if buff_top!=-1:
+        
+        elif buff_top!=-1:
             flag=3
             #print(flag)
             stack=shift(stack)
             return flag,stack
 
-        if stack_top!=-1:
+            
+        elif stack_top!=-1:
             flag_reduce=0
             for j in tags:
                 if stack_top==j[0] and j[3]=='R':
@@ -111,16 +125,22 @@ def predict (stack):
                 if stack_top==j[1] and j[3]=='L':
                     flag_reduce=1
                     break
-            if flag_reduce==1:
+            if flag_reduce==0:
                 stack=reduction(stack)
                 flag=4
-                #print(flag)
+                print(flag)
                 return flag,stack
-        if flag==0:
-            #print(flag)
+
+
+
+        elif flag==0:
+            print("Not parsable")
             flag=5
             return flag,stack
-
+        else:
+            flag=6
+            print("dependencies are mapped")
+            return 6,-1
 
 with open(sys.argv[1], 'r') as f:
     for line in f:
@@ -151,27 +171,29 @@ with open(sys.argv[1], 'r') as f:
         
 
         if pattern_end.match(line):
-            stack=deque()
+            stack=[]
             initialiser="ROOT"
             stack.append(initialiser)
             
-            condition=0
             flag=0
-            while condition<12:
+            while flag!=6:
                 flag,stack= predict(stack)
-                #print(flag)
-                #print(stack)
-                condition+=1                
+                print(flag)
+                if flag==5:
+                    break
+                #condition+=1               
 
             #print(buffer)
             #print(tags)
-            #print(dependencies)
+            print(dependencies)
             tags.clear()
+            dependencies.clear()
 
         if line_number == 8:
             buffer.clear()
             line=line.split()
             for i in line:   
                 buffer.append(i)
-            buffer.reverse()
+            buffer.reverse()   
+                
             
