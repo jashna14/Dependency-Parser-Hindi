@@ -10,20 +10,39 @@ def find_dependencies():
 
 		temp = []
 
-		for k in dependencies[t]:
-			temp.append(k)
 
 		if (dependencies[t][7] != 'ROOT'):
 			for j in range(len(dependencies)):
 				if (dependencies[t][7] == dependencies[j][5]):
-					temp.append(';')
-					for k in dependencies[j]:
-						temp.append(k)
-					temp.append(';')
-					if (j < t):
-						temp.append('L')
-					elif(j > t):
+
+					if(t < j):
+						for k in dependencies[t]:
+							temp.append(k)
+
+						temp.append(';')
+
+						for k in dependencies[j]:
+							temp.append(k)
+					
+						temp.append(';')
+						
 						temp.append('R')
+						
+
+					elif(j < t):
+						for k in dependencies[j]:
+							temp.append(k)
+						
+						temp.append(';')
+						
+						for k in dependencies[t]:
+							temp.append(k)
+
+
+						temp.append(';')
+					
+						
+						temp.append('L')						
 
 					temp.append(';')
 					temp.append(dependencies[t][6])
@@ -31,8 +50,10 @@ def find_dependencies():
 					break
 
 		else:
-			temp.append(';')
 			temp.append('ROOT')
+			temp.append(';')
+			for k in dependencies[t]:
+				temp.append(k)
 			temp.append(';')
 			temp.append('L')
 			temp.append(';')
