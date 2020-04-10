@@ -1,63 +1,185 @@
 <Sentence id='1'>
-यह एशिया की सबसे बड़ी मस्जिदों में से एक है । 
-यह एशिया का सबसे बड़ा मस्जिद में से एक है । 
-DEM NNP PSP INTF JJ NN PSP PSP QC VM SYM 
-एशिया मस्जिदों एक है । 
-एशिया मस्जिद एक है । 
-NP NP NP VGF BLK 
-NNP NN QC VM SYM 
-NP NP2 NP3 VGF BLK 
-H  एशिया  एशिया  NP  NNP  NP  r6  NP2    ;  H  मस्जिदों  मस्जिद  NP  NN  NP2  k7  VGF    ;  R  ;  r6  
-H  मस्जिदों  मस्जिद  NP  NN  NP2  k7  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k7  
-H  एक  एक  NP  QC  NP3  k1  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
-H  है  है  VGF  VM  VGF  NULL  ROOT    ;  ROOT  ;  L  ;  ROOT  
-H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  rsym  
+यहाँ से 5 किमी दूरी पर स्थित वासुकि ताल अपने पारदर्शी जल और उसमें डूबते - उतराते हिमखंडों के अद्भुत दृश्यों के लिए विख्यात है । 
+यहाँ से 5 किमी दूरी पर स्थित वासुकि ताल अपना पारदर्शी जल और वह डूब - उतरा हिमखंड का अद्भुत दृश्य के लिए विख्यात है । 
+PRP PSP QC NN NN PSP JJ NNPC NNP PRP JJ NN CC PRP VMC SYM VM NN PSP JJ NN PSP PSP JJ VM SYM 
+यहाँ दूरी स्थित ताल अपने जल और उसमें उतराते हिमखंडों दृश्यों विख्यात है । 
+यहाँ दूरी स्थित ताल अपना जल और वह उतरा हिमखंड दृश्य विख्यात है । 
+NP NP JJP NP NP NP CCP NP VGNF NP NP JJP VGF BLK 
+PRP NN JJ NNP PRP NN CC PRP VM NN NN JJ VM SYM 
+NP NP2 JJP NP3 NP4 NP5 CCP NP6 VGNF NP7 NP8 JJP2 VGF BLK 
+H  यहाँ  यहाँ  NP  PRP  NP  nmod  NP2    ;  H  दूरी  दूरी  NP  NN  NP2  jjmod  JJP    ;  R  ;  nmod  
+H  दूरी  दूरी  NP  NN  NP2  jjmod  JJP    ;  H  स्थित  स्थित  JJP  JJ  JJP  nmod  NP3    ;  R  ;  jjmod  
+H  स्थित  स्थित  JJP  JJ  JJP  nmod  NP3    ;  H  ताल  ताल  NP  NNP  NP3  k1  VGF    ;  R  ;  nmod  
+H  ताल  ताल  NP  NNP  NP3  k1  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
+H  अपने  अपना  NP  PRP  NP4  r6  NP5    ;  H  जल  जल  NP  NN  NP5  ccof  CCP    ;  R  ;  r6  
+H  जल  जल  NP  NN  NP5  ccof  CCP    ;  H  और  और  CCP  CC  CCP  rt  VGF    ;  R  ;  ccof  
+H  और  और  CCP  CC  CCP  rt  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  rt  
+H  उसमें  वह  NP  PRP  NP6  k7  VGNF    ;  H  उतराते  उतरा  VGNF  VM  VGNF  nmod__k1inv  NP7    ;  R  ;  k7  
+H  उतराते  उतरा  VGNF  VM  VGNF  nmod__k1inv  NP7    ;  H  हिमखंडों  हिमखंड  NP  NN  NP7  r6  NP8    ;  R  ;  nmod__k1inv  
+H  हिमखंडों  हिमखंड  NP  NN  NP7  r6  NP8    ;  H  दृश्यों  दृश्य  NP  NN  NP8  ccof  CCP    ;  R  ;  r6  
+H  और  और  CCP  CC  CCP  rt  VGF    ;  H  दृश्यों  दृश्य  NP  NN  NP8  ccof  CCP    ;  L  ;  ccof  
+H  विख्यात  विख्यात  JJP  JJ  JJP2  k1s  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1s  
+ROOT  ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  ROOT  
+H  है  है  VGF  VM  VGF  NULL  ROOT    ;  H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  L  ;  rsym  
 </Sentence>
 <Sentence id='2'>
-इसे नवाब शाहजेहन ने बनवाया था । 
-यह नवाब शाहजेहन ने बनवा था । 
-PRP NNC NNP PSP VM VAUX SYM 
-इसे शाहजेहन बनवाया । 
-यह शाहजेहन बनवा । 
-NP NP VGF BLK 
-PRP NNP VM SYM 
-NP NP2 VGF BLK 
-H  इसे  यह  NP  PRP  NP  k2  VGF    ;  H  बनवाया  बनवा  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k2  
-H  शाहजेहन  शाहजेहन  NP  NNP  NP2  k1  VGF    ;  H  बनवाया  बनवा  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
-H  बनवाया  बनवा  VGF  VM  VGF  NULL  ROOT    ;  ROOT  ;  L  ;  ROOT  
-H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  H  बनवाया  बनवा  VGF  VM  VGF  NULL  ROOT    ;  L  ;  rsym  
+इसके अतिरिक्त गुग्गुल कुंड , भीम गुफा तथा भीमशिला भी दर्शनीय स्थल हैं । 
+यह अतिरिक्त गुग्गुल कुंड COMMA भीम गुफा तथा भीमशिला भी दर्शनीय स्थल है । 
+PRP PSP NNPC NNP SYM NNPC NNP CC NNP RP JJ NN VM SYM 
+इसके कुंड गुफा तथा भीमशिला स्थल हैं । 
+यह कुंड गुफा तथा भीमशिला स्थल है । 
+NP NP NP CCP NP NP VGF BLK 
+PRP NNP NNP CC NNP NN VM SYM 
+NP NP2 NP3 CCP NP4 NP5 VGF BLK 
+H  इसके  यह  NP  PRP  NP  vmod  VGF    ;  H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  vmod  
+H  कुंड  कुंड  NP  NNP  NP2  ccof  CCP    ;  H  तथा  तथा  CCP  CC  CCP  k1  VGF    ;  R  ;  ccof  
+H  गुफा  गुफा  NP  NNP  NP3  ccof  CCP    ;  H  तथा  तथा  CCP  CC  CCP  k1  VGF    ;  R  ;  ccof  
+H  तथा  तथा  CCP  CC  CCP  k1  VGF    ;  H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
+H  तथा  तथा  CCP  CC  CCP  k1  VGF    ;  H  भीमशिला  भीमशिला  NP  NNP  NP4  ccof  CCP    ;  L  ;  ccof  
+H  स्थल  स्थल  NP  NN  NP5  k1s  VGF    ;  H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1s  
+ROOT  ;  H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  ROOT  
+H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  L  ;  rsym  
 </Sentence>
 <Sentence id='3'>
-इसके चारों ओर दीवार है और बीच में एक तालाब है । 
-यह चार ओर दीवार है और बीच में एक तालाब है । 
-PRP QC NST NN VM CC NST PSP QC NN VM SYM 
-इसके चारों दीवार है और बीच तालाब है । 
-यह चार दीवार है और बीच तालाब है । 
-NP NP NP VGF CCP NP NP VGF BLK 
-PRP QC NN VM CC NST NN VM SYM 
-NP NP2 NP3 VGF CCP NP4 NP5 VGF2 BLK 
-H  इसके  यह  NP  PRP  NP  r6  NP2    ;  H  चारों  चार  NP  QC  NP2  rd  VGF    ;  R  ;  r6  
-H  चारों  चार  NP  QC  NP2  rd  VGF    ;  H  है  है  VGF  VM  VGF  ccof  CCP    ;  R  ;  rd  
-H  दीवार  दीवार  NP  NN  NP3  k1  VGF    ;  H  है  है  VGF  VM  VGF  ccof  CCP    ;  R  ;  k1  
-H  है  है  VGF  VM  VGF  ccof  CCP    ;  H  और  और  CCP  CC  CCP  NULL  ROOT    ;  R  ;  ccof  
-H  और  और  CCP  CC  CCP  NULL  ROOT    ;  ROOT  ;  L  ;  ROOT  
-H  बीच  बीच  NP  NST  NP4  k7p  VGF2    ;  H  है  है  VGF  VM  VGF2  ccof  CCP    ;  R  ;  k7p  
-H  तालाब  तालाब  NP  NN  NP5  k1  VGF2    ;  H  है  है  VGF  VM  VGF2  ccof  CCP    ;  R  ;  k1  
-H  है  है  VGF  VM  VGF2  ccof  CCP    ;  H  और  और  CCP  CC  CCP  NULL  ROOT    ;  L  ;  ccof  
-H  ।  ।  BLK  SYM  BLK  rsym  CCP    ;  H  और  और  CCP  CC  CCP  NULL  ROOT    ;  L  ;  rsym  
+आधा किमी की दूरी पर भैरवनाथ मंदिर है , जहाँ केवल केदारनाथ के पट खुलने और बंद होने के दिन ही पूजन किया जाता है । 
+आधा किमी का दूरी पर भैरवनाथ मंदिर है COMMA जहाँ केवल केदारनाथ का पट खुल और बंद हो का दिन ही पूजन कर जा है । 
+QF NN PSP NN PSP NNP NN VM SYM PRP RP NNP PSP NN VM CC JJ VM PSP NN RP NN VM VAUX VAUX SYM 
+किमी दूरी मंदिर है जहाँ केदारनाथ पट खुलने और बंद होने दिन पूजन किया । 
+किमी दूरी मंदिर है जहाँ केदारनाथ पट खुल और बंद हो दिन पूजन कर । 
+NP NP NP VGF NP NP NP VGNN CCP JJP VGNN NP NP VGF BLK 
+NN NN NN VM PRP NNP NN VM CC JJ VM NN NN VM SYM 
+NP NP2 NP3 VGF NP4 NP5 NP6 VGNN CCP JJP VGNN2 NP7 NP8 VGF2 BLK 
+H  किमी  किमी  NP  NN  NP  r6  NP2    ;  H  दूरी  दूरी  NP  NN  NP2  k7p  VGF    ;  R  ;  r6  
+H  दूरी  दूरी  NP  NN  NP2  k7p  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k7p  
+H  मंदिर  मंदिर  NP  NN  NP3  k1  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
+ROOT  ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  ROOT  
+H  जहाँ  जहाँ  NP  PRP  NP4  k7p  VGF2    ;  H  किया  कर  VGF  VM  VGF2  nmod__relc  NP3    ;  R  ;  k7p  
+H  केदारनाथ  केदारनाथ  NP  NNP  NP5  r6  NP6    ;  H  पट  पट  NP  NN  NP6  k2  VGNN    ;  R  ;  r6  
+H  पट  पट  NP  NN  NP6  k2  VGNN    ;  H  खुलने  खुल  VGNN  VM  VGNN  ccof  CCP    ;  R  ;  k2  
+H  खुलने  खुल  VGNN  VM  VGNN  ccof  CCP    ;  H  और  और  CCP  CC  CCP  r6  NP7    ;  R  ;  ccof  
+H  और  और  CCP  CC  CCP  r6  NP7    ;  H  दिन  दिन  NP  NN  NP7  k7t  VGF2    ;  R  ;  r6  
+H  बंद  बंद  JJP  JJ  JJP  pof  VGNN2    ;  H  होने  हो  VGNN  VM  VGNN2  ccof  CCP    ;  R  ;  pof  
+H  और  और  CCP  CC  CCP  r6  NP7    ;  H  होने  हो  VGNN  VM  VGNN2  ccof  CCP    ;  L  ;  ccof  
+H  दिन  दिन  NP  NN  NP7  k7t  VGF2    ;  H  किया  कर  VGF  VM  VGF2  nmod__relc  NP3    ;  R  ;  k7t  
+H  पूजन  पूजन  NP  NN  NP8  pof  VGF2    ;  H  किया  कर  VGF  VM  VGF2  nmod__relc  NP3    ;  R  ;  pof  
+H  मंदिर  मंदिर  NP  NN  NP3  k1  VGF    ;  H  किया  कर  VGF  VM  VGF2  nmod__relc  NP3    ;  L  ;  nmod__relc  
+H  है  है  VGF  VM  VGF  NULL  ROOT    ;  H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  L  ;  rsym  
 </Sentence>
 <Sentence id='4'>
-इसका प्रवेश द्वार दो मंजिला है । 
-यह प्रवेश द्वार दो मंजिला है । 
-PRP NNC NN QC JJ VM SYM 
-इसका द्वार मंजिला है । 
-यह द्वार मंजिला है । 
-NP NP JJP VGF BLK 
-PRP NN JJ VM SYM 
-NP NP2 JJP VGF BLK 
-H  इसका  यह  NP  PRP  NP  r6  NP2    ;  H  द्वार  द्वार  NP  NN  NP2  k1  VGF    ;  R  ;  r6  
-H  द्वार  द्वार  NP  NN  NP2  k1  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
-H  मंजिला  मंजिला  JJP  JJ  JJP  k1s  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1s  
-H  है  है  VGF  VM  VGF  NULL  ROOT    ;  ROOT  ;  L  ;  ROOT  
-H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  rsym  
+भैरव का स्थान उत्तराखंड में क्षेत्रपाल अथवा भूमिदेव के रूप में महत्वपूर्ण है । 
+भैरव का स्थान उत्तराखंड में क्षेत्रपाल अथवा भूमिदेव के रूप में महत्वपूर्ण है । 
+NNP PSP NN NNP PSP NNP CC NNP PSP PSP PSP JJ VM SYM 
+भैरव स्थान उत्तराखंड क्षेत्रपाल अथवा भूमिदेव महत्वपूर्ण है । 
+भैरव स्थान उत्तराखंड क्षेत्रपाल अथवा भूमिदेव महत्वपूर्ण है । 
+NP NP NP NP CCP NP JJP VGF BLK 
+NNP NN NNP NNP CC NNP JJ VM SYM 
+NP NP2 NP3 NP4 CCP NP5 JJP VGF BLK 
+H  भैरव  भैरव  NP  NNP  NP  r6  NP2    ;  H  स्थान  स्थान  NP  NN  NP2  k1  VGF    ;  R  ;  r6  
+H  स्थान  स्थान  NP  NN  NP2  k1  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
+H  उत्तराखंड  उत्तराखंड  NP  NNP  NP3  k7p  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k7p  
+H  क्षेत्रपाल  क्षेत्रपाल  NP  NNP  NP4  ccof  CCP    ;  H  अथवा  अथवा  CCP  CC  CCP  k7  VGF    ;  R  ;  ccof  
+H  अथवा  अथवा  CCP  CC  CCP  k7  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k7  
+H  अथवा  अथवा  CCP  CC  CCP  k7  VGF    ;  H  भूमिदेव  भूमिदेव  NP  NNP  NP5  ccof  CCP    ;  L  ;  ccof  
+H  महत्वपूर्ण  महत्वपूर्ण  JJP  JJ  JJP  k1s  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1s  
+ROOT  ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  ROOT  
+H  है  है  VGF  VM  VGF  NULL  ROOT    ;  H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  L  ;  rsym  
+</Sentence>
+<Sentence id='5'>
+यह सोनप्रयाग से 5 किमी आगे और केदारनाथ में 6 किमी पहले ( पैदल ) पड़ने वाला एक अत्यंत महत्वपूर्ण तीर्थ एवं विश्राम स्थल है । 
+यह सोनप्रयाग से 5 किमी आगे और केदारनाथ में 6 किमी पहले ( पैदल ) पड़ वाला एक अत्यन्त महत्वपूर्ण तीर्थ एवं विश्राम स्थल है । 
+PRP NNP PSP QC NN NST CC NNP PSP QC NN NST SYM NN SYM VM PSP QC INTF JJ NN CC NNC NN VM SYM 
+यह सोनप्रयाग किमी और केदारनाथ किमी पैदल पड़ने महत्वपूर्ण तीर्थ एवं स्थल है । 
+यह सोनप्रयाग किमी और केदारनाथ किमी पैदल पड़ महत्वपूर्ण तीर्थ एवं स्थल है । 
+NP NP NP CCP NP NP NP VGNN JJP NP CCP NP VGF BLK 
+PRP NNP NN CC NNP NN NN VM JJ NN CC NN VM SYM 
+NP NP2 NP3 CCP NP4 NP5 NP6 VGNN JJP NP7 CCP2 NP8 VGF BLK 
+H  यह  यह  NP  PRP  NP  k1  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
+H  सोनप्रयाग  सोनप्रयाग  NP  NNP  NP2  nmod  NP3    ;  H  किमी  किमी  NP  NN  NP3  ccof  CCP    ;  R  ;  nmod  
+H  किमी  किमी  NP  NN  NP3  ccof  CCP    ;  H  और  और  CCP  CC  CCP  k7p  VGNN    ;  R  ;  ccof  
+H  और  और  CCP  CC  CCP  k7p  VGNN    ;  H  पड़ने  पड़  VGNN  VM  VGNN  nmod  NP7    ;  R  ;  k7p  
+H  केदारनाथ  केदारनाथ  NP  NNP  NP4  nmod  NP5    ;  H  किमी  किमी  NP  NN  NP5  ccof  CCP    ;  R  ;  nmod  
+H  और  और  CCP  CC  CCP  k7p  VGNN    ;  H  किमी  किमी  NP  NN  NP5  ccof  CCP    ;  L  ;  ccof  
+H  केदारनाथ  केदारनाथ  NP  NNP  NP4  nmod  NP5    ;  H  पैदल  पैदल  NP  NN  NP6  nmod  NP4    ;  L  ;  nmod  
+H  पड़ने  पड़  VGNN  VM  VGNN  nmod  NP7    ;  H  तीर्थ  तीर्थ  NP  NN  NP7  ccof  CCP2    ;  R  ;  nmod  
+H  महत्वपूर्ण  महत्वपूर्ण  JJP  JJ  JJP  nmod  NP7    ;  H  तीर्थ  तीर्थ  NP  NN  NP7  ccof  CCP2    ;  R  ;  nmod  
+H  तीर्थ  तीर्थ  NP  NN  NP7  ccof  CCP2    ;  H  एवं  एवं  CCP  CC  CCP2  k1s  VGF    ;  R  ;  ccof  
+H  एवं  एवं  CCP  CC  CCP2  k1s  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1s  
+H  एवं  एवं  CCP  CC  CCP2  k1s  VGF    ;  H  स्थल  स्थल  NP  NN  NP8  ccof  CCP2    ;  L  ;  ccof  
+ROOT  ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  ROOT  
+H  है  है  VGF  VM  VGF  NULL  ROOT    ;  H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  L  ;  rsym  
+</Sentence>
+<Sentence id='7'>
+यहाँ गर्म पानी और ठंडे पानी के दो बहुत ही उत्तम कुंड हैं । 
+यहाँ गर्म पानी और ठंडा पानी का दो बहुत ही उत्तम कुंड है । 
+PRP JJ NN CC JJ NN PSP QC QF RP JJ NN VM SYM 
+यहाँ पानी और पानी कुंड हैं । 
+यहाँ पानी और पानी कुंड है । 
+NP NP CCP NP NP VGF BLK 
+PRP NN CC NN NN VM SYM 
+NP NP2 CCP NP3 NP4 VGF BLK 
+H  यहाँ  यहाँ  NP  PRP  NP  k7p  VGF    ;  H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k7p  
+H  पानी  पानी  NP  NN  NP2  ccof  CCP    ;  H  और  और  CCP  CC  CCP  r6  NP4    ;  R  ;  ccof  
+H  और  और  CCP  CC  CCP  r6  NP4    ;  H  कुंड  कुंड  NP  NN  NP4  k1  VGF    ;  R  ;  r6  
+H  और  और  CCP  CC  CCP  r6  NP4    ;  H  पानी  पानी  NP  NN  NP3  ccof  CCP    ;  L  ;  ccof  
+H  कुंड  कुंड  NP  NN  NP4  k1  VGF    ;  H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
+ROOT  ;  H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  ROOT  
+H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  L  ;  rsym  
+</Sentence>
+<Sentence id='8'>
+यहाँ गौरी मंदिर है , जो कुछ छोटा है और प्राचीन नहीं है । 
+यहाँ गौरी मंदिर है COMMA जो कुछ छोटा है और प्राचीन नहीं है । 
+PRP NNP NN VM SYM PRP QF JJ VM CC JJ NEG VM SYM 
+यहाँ मंदिर है जो छोटा है और प्राचीन है । 
+यहाँ मंदिर है जो छोटा है और प्राचीन है । 
+NP NP VGF NP JJP VGF CCP JJP VGF BLK 
+PRP NN VM PRP JJ VM CC JJ VM SYM 
+NP NP2 VGF NP3 JJP VGF2 CCP JJP2 VGF3 BLK 
+H  यहाँ  यहाँ  NP  PRP  NP  k7p  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k7p  
+H  मंदिर  मंदिर  NP  NN  NP2  k1  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
+ROOT  ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  ROOT  
+H  जो  जो  NP  PRP  NP3  k1  VGF2    ;  H  है  है  VGF  VM  VGF2  ccof  CCP    ;  R  ;  k1  
+H  छोटा  छोटा  JJP  JJ  JJP  k1s  VGF2    ;  H  है  है  VGF  VM  VGF2  ccof  CCP    ;  R  ;  k1s  
+H  है  है  VGF  VM  VGF2  ccof  CCP    ;  H  और  और  CCP  CC  CCP  nmod__relc  NP2    ;  R  ;  ccof  
+H  मंदिर  मंदिर  NP  NN  NP2  k1  VGF    ;  H  और  और  CCP  CC  CCP  nmod__relc  NP2    ;  L  ;  nmod__relc  
+H  प्राचीन  प्राचीन  JJP  JJ  JJP2  k1s  VGF3    ;  H  है  है  VGF  VM  VGF3  ccof  CCP    ;  R  ;  k1s  
+H  और  और  CCP  CC  CCP  nmod__relc  NP2    ;  H  है  है  VGF  VM  VGF3  ccof  CCP    ;  L  ;  ccof  
+H  है  है  VGF  VM  VGF  NULL  ROOT    ;  H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  L  ;  rsym  
+</Sentence>
+<Sentence id='9'>
+जनश्रुति है कि इसी स्थान पर पार्वती ने महादेव को पाने के लिए तपस्या की थी । 
+जनश्रुति है कि यह स्थान पर पार्वती ने महादेव को पा के लिए तपस्या कर था । 
+NN VM CC DEM NN PSP NNP PSP NNP PSP VM PSP PSP NN VM VAUX SYM 
+जनश्रुति है कि स्थान पार्वती महादेव पाने तपस्या की । 
+जनश्रुति है कि स्थान पार्वती महादेव पा तपस्या कर । 
+NP VGF CCP NP NP NP VGNN NP VGF BLK 
+NN VM CC NN NNP NNP VM NN VM SYM 
+NP VGF CCP NP2 NP3 NP4 VGNN NP5 VGF2 BLK 
+H  जनश्रुति  जनश्रुति  NP  NN  NP  k1  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
+ROOT  ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  ROOT  
+H  जनश्रुति  जनश्रुति  NP  NN  NP  k1  VGF    ;  H  कि  कि  CCP  CC  CCP  rs  NP    ;  L  ;  rs  
+H  स्थान  स्थान  NP  NN  NP2  k7p  VGF2    ;  H  की  कर  VGF  VM  VGF2  ccof  CCP    ;  R  ;  k7p  
+H  पार्वती  पार्वती  NP  NNP  NP3  k1  VGF2    ;  H  की  कर  VGF  VM  VGF2  ccof  CCP    ;  R  ;  k1  
+H  महादेव  महादेव  NP  NNP  NP4  k2  VGNN    ;  H  पाने  पा  VGNN  VM  VGNN  rt  VGF2    ;  R  ;  k2  
+H  पाने  पा  VGNN  VM  VGNN  rt  VGF2    ;  H  की  कर  VGF  VM  VGF2  ccof  CCP    ;  R  ;  rt  
+H  तपस्या  तपस्या  NP  NN  NP5  pof  VGF2    ;  H  की  कर  VGF  VM  VGF2  ccof  CCP    ;  R  ;  pof  
+H  कि  कि  CCP  CC  CCP  rs  NP    ;  H  की  कर  VGF  VM  VGF2  ccof  CCP    ;  L  ;  ccof  
+H  है  है  VGF  VM  VGF  NULL  ROOT    ;  H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  L  ;  rsym  
+</Sentence>
+<Sentence id='10'>
+मंदिर में गौरी और पार्वती की धातु की मूर्तियाँ हैं । 
+मंदिर में गौरी और पार्वती का धातु का मूर्ति है । 
+NN PSP NNP CC NNP PSP NN PSP NN VM SYM 
+मंदिर गौरी और पार्वती धातु मूर्तियाँ हैं । 
+मंदिर गौरी और पार्वती धातु मूर्ति है । 
+NP NP CCP NP NP NP VGF BLK 
+NN NNP CC NNP NN NN VM SYM 
+NP NP2 CCP NP3 NP4 NP5 VGF BLK 
+H  मंदिर  मंदिर  NP  NN  NP  k7p  VGF    ;  H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k7p  
+H  गौरी  गौरी  NP  NNP  NP2  ccof  CCP    ;  H  और  और  CCP  CC  CCP  r6  NP4    ;  R  ;  ccof  
+H  और  और  CCP  CC  CCP  r6  NP4    ;  H  धातु  धातु  NP  NN  NP4  r6  NP5    ;  R  ;  r6  
+H  और  और  CCP  CC  CCP  r6  NP4    ;  H  पार्वती  पार्वती  NP  NNP  NP3  ccof  CCP    ;  L  ;  ccof  
+H  धातु  धातु  NP  NN  NP4  r6  NP5    ;  H  मूर्तियाँ  मूर्ति  NP  NN  NP5  k1  VGF    ;  R  ;  r6  
+H  मूर्तियाँ  मूर्ति  NP  NN  NP5  k1  VGF    ;  H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
+ROOT  ;  H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  ROOT  
+H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  L  ;  rsym  
 </Sentence>
