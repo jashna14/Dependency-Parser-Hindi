@@ -53,9 +53,74 @@ def shift (stack):
 
 def predict (stack):
     flag=0
-    length=len(buffer)
-    buff_top=buffer[length-1]
-    print(buffer)
+    stack_top=-1
+    if len(stack)>0:
+        stack_top=stack[len(stack)-1]
+
+    buff_top=-1
+    if len(buffer)>0:
+        length=len(buffer)
+        buff_top=buffer[length-1]
+    
+    #print(buffer)
+    for i in tags:
+        if stack_top!=-1 and stack_top==i[0]:
+            if buff_top==i[1] and i[2]=='R':
+                flag_left=0
+                for j in tags:
+                    if stack_top==j[0] and j[2]=='R':
+                        if i==j:
+                            continue
+                        else :
+                            flag_left=1
+                            break
+                if flag_left==0:
+                    flag=1
+                    #print(flag)
+                    stack=leftarc(i[0],i[1],stack,i[3])
+                    return flag,stack
+
+        if buff_top!=-1 and stack_top==i[0]:
+            if buff_top==i[1] and i[2]=='L':
+                flag_right=0
+                for j in tags:
+                    if buff_top==j[0] and j[2]=='L':
+                        if i==j:
+                            continue
+                        else:
+                            flag_right=1
+                            break
+                if flag_right==0:
+                    flag=2
+                   # print(flag)
+                    stack=rightarc(i[0],i[1],stack,i[3])
+                    return flag,stack
+
+        if buff_top!=-1:
+            flag=3
+            #print(flag)
+            stack=shift(stack)
+            return flag,stack
+
+        if stack_top!=-1:
+            flag_reduce=0
+            for j in tags:
+                if stack_top==j[0] and j[3]=='R':
+                    flag_reduce=1
+                    break
+                if stack_top==j[1] and j[3]=='L':
+                    flag_reduce=1
+                    break
+            if flag_reduce==1:
+                stack=reduction(stack)
+                flag=4
+                #print(flag)
+                return flag,stack
+        if flag==0:
+            #print(flag)
+            flag=5
+            return flag,stack
+
 
 with open(sys.argv[1], 'r') as f:
     for line in f:
@@ -91,18 +156,22 @@ with open(sys.argv[1], 'r') as f:
             stack.append(initialiser)
             
             condition=0
-            #while condition==0:
+            flag=0
+            while condition<12:
+                flag,stack= predict(stack)
+                #print(flag)
+                #print(stack)
+                condition+=1                
 
             #print(buffer)
-            #print(stack)
             #print(tags)
-            #initialised stack , buffer and have dependencies
-            #predict(stack)
+            #print(dependencies)
             tags.clear()
-            dependencies.clear()
 
         if line_number == 8:
             buffer.clear()
             line=line.split()
             for i in line:   
                 buffer.append(i)
+            buffer.reverse()
+            
