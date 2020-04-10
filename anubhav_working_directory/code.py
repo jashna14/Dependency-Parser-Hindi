@@ -65,8 +65,8 @@ with open(sys.argv[1], 'r') as f:
 
 
 
-#print (buffer)
-#print(training_tags)
+print (buffer)
+print(training_tags)
 #print(len(buffer))
 for i in range(len(buffer)):
 	line=copy.copy(buffer[i][1])
@@ -76,4 +76,5 @@ for i in range(len(buffer)):
 	while condition==0:
 		initialiser="ROOT"
 		stack.append(initialiser)
+		break
 		
