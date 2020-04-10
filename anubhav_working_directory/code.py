@@ -7,10 +7,24 @@ from collections import deque
 count=0
 line_state=[]
 line_id=[]
-training_tags=[]
 buffer=[]
+training_tags=[]
 dependency=[]
 line_number=0
+def checker(buffer,local_dependency,idx,hold,stack_top):
+	flag=0
+	for j in range(len(local_dependency)):
+		if buffer[1][idx]==local_dependency[j][2] and local_dependency[j][3]=="R":
+			if stack_top==local_dependency[j][1]:
+				if j!=hold:
+					flag=1
+					break
+	if flag==0:
+		return 1
+	else:
+		return 0
+	
+
 with open(sys.argv[1], 'r') as f:
 	for line in f:
 		line_number+=1 #for calculating the line to print .Currently used to print buffer
@@ -43,14 +57,51 @@ with open(sys.argv[1], 'r') as f:
 			line_state.clear()
 
 		if pattern_end.match(line):
+			local_dependency=[]
+			#print(len(line))
+			stack=deque()
+			initialiser="ROOT"
+			stack.append(initialiser)
+			for j in training_tags:
+				if buffer[0]==j[0]:
+					local_dependency.append(j)
+			condition=0
+			pointer_buffer=0
+			print(stack)
+			while condition==0:
+				hold=0
+				stack_top=stack[len(stack)-1]
+				for j in range(len(local_dependency)):
+					if buffer[1][pointer_buffer]==local_dependency[j][2] and local_dependency[j][3]=="R":
+						if stack_top==local_dependency[j][1]:
+							hold=j
+							k=checker(buffer,local_dependency,pointer_buffer,hold,stack_top)
+							if k==1:
+								temp=[]
+								temp.append(buffer[0])
+								temp.append(buffer[1][pointer_buffer])
+								temp.append(local_dependency[j][2])
+								temp.append("l")
+								temp2=copy.copy(temp)
+								print(temp2)
+								stack.pop()
+								break
+				for j in range(len(local_dependency)):
+					
+
+
+			# print(buffer)
+			# print(local_dependency)
 			line_id.pop()
 		if line_number == 8:
-			temp=[]
-			temp.append(count)
+			buffer.clear()
+			buffer.append(count)
 			line=line.split()
-			temp.append(line)
-			#print(len(line))
-			buffer.append(temp)
+			buffer.append(line)
+			
+					
+
+
 
 # def left_arc(stack,size):
 # 	temp=[]
@@ -64,6 +115,7 @@ with open(sys.argv[1], 'r') as f:
 # 				else:
 
 
+<<<<<<< HEAD
 
 print (buffer)
 print(training_tags)
@@ -78,3 +130,5 @@ for i in range(len(buffer)):
 		stack.append(initialiser)
 		break
 		
+=======
+>>>>>>> 2a7e362117502a50df94fafd6f0b10e3659e00af
