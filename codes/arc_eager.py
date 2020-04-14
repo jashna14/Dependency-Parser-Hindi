@@ -234,8 +234,5 @@ with open(sys.argv[1], 'r') as f:
 print(count)
 print(not_parasble_sentences)
 print(len(not_parasble_sentences))
-print(countki)
-print(len(not_parasble_sentences_ki))    			
-
         	
 
