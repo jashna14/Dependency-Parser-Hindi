@@ -112,18 +112,7 @@ def is_parsable():
 			orignal_dependency,relation = check_orignal_dependencies()
 
 			if(orignal_dependency == 0):
-				# # flag = 0
 
-				# # if(len(stack) > 1):
-				# 	# can_reduce = check_reduce()
-				# 	# if(can_reduce):
-				# 		# reduce()
-				# 		# print('reduce')
-				# 		# flag = 1
-
-				# # if(flag == 0):
-				# shift()
-				# print('shift')
 				if(len(stack) > 1):
 					can_reduce = dependency_link()
 					if(can_reduce == 1):
@@ -175,8 +164,6 @@ def is_parsable():
 
 with open(sys.argv[1], 'r') as f:
 	count = 0
-	flagki = 0
-	countki = 0
 	for line in f:
 		line_number += 1
 		line = re.sub('\s+',' ',line)
@@ -220,14 +207,6 @@ with open(sys.argv[1], 'r') as f:
 				buffer.append(i)
 			buffer.reverse()
 
-		elif(line_number == 5):
-			line1 = line.strip()
-			line2 = line1.split(' ')
-			for i in line2:
-				if(i == 'कि'):
-					flagki = 1
-					break
-
 
 		elif(pattern_end.match(line)):
 			initialiser="ROOT"
@@ -242,10 +221,6 @@ with open(sys.argv[1], 'r') as f:
 				print('Not parsable')
 				not_parasble_sentences.append(sentence_id)
 				count+=1
-				if(flagki == 1):
-					countki += 1
-					not_parasble_sentences_ki.append(sentence_id)
-
 
 
 			print(dependencies)	
