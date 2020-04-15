@@ -183,3 +183,22 @@ H  मूर्तियाँ  मूर्ति  NP  NN  NP5  k1  VGF    ;  H
 ROOT  ;  H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  ROOT  
 H  हैं  है  VGF  VM  VGF  NULL  ROOT    ;  H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  L  ;  rsym  
 </Sentence>
+<Sentence id='189'>
+मोनिका पर भोपाल से २००१ में फर्जी पासपोर्ट जारी करवाने का आरोप है । 
+मोनिका पर भोपाल से २००१ में फर्जी पासपोर्ट जारी कर का आरोप है । 
+NNP PSP NNP PSP NNP PSP JJ NN JJ VM PSP NN VM SYM 
+मोनिका भोपाल २००१ पासपोर्ट जारी करवाने आरोप है । 
+मोनिका भोपाल २००१ पासपोर्ट जारी कर आरोप है । 
+NP NP NP NP JJP VGNN NP VGF BLK 
+NNP NNP NNP NN JJ VM NN VM SYM 
+NP NP2 NP3 NP4 JJP VGNN NP5 VGF BLK 
+H  मोनिका  मोनिका  NP  NNP  NP  k7  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k7  
+H  भोपाल  भोपाल  NP  NNP  NP2  k5  VGNN    ;  H  करवाने  कर  VGNN  VM  VGNN  r6  NP5    ;  R  ;  k5  
+H  २००१  २००१  NP  NNP  NP3  k7t  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k7t  
+H  पासपोर्ट  पासपोर्ट  NP  NN  NP4  k2  VGNN    ;  H  करवाने  कर  VGNN  VM  VGNN  r6  NP5    ;  R  ;  k2  
+H  जारी  जारी  JJP  JJ  JJP  pof  VGNN    ;  H  करवाने  कर  VGNN  VM  VGNN  r6  NP5    ;  R  ;  pof  
+H  करवाने  कर  VGNN  VM  VGNN  r6  NP5    ;  H  आरोप  आरोप  NP  NN  NP5  k1  VGF    ;  R  ;  r6  
+H  आरोप  आरोप  NP  NN  NP5  k1  VGF    ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  R  ;  k1  
+ROOT  ;  H  है  है  VGF  VM  VGF  NULL  ROOT    ;  L  ;  ROOT  
+H  है  है  VGF  VM  VGF  NULL  ROOT    ;  H  ।  ।  BLK  SYM  BLK  rsym  VGF    ;  L  ;  rsym  
+</Sentence>
