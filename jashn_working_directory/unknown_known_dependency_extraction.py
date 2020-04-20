@@ -119,13 +119,13 @@ with open(sys.argv[1], 'r') as f:
 		if(pattern_start.match(line)):
 			line_number = 0
 			sentence_id = line.split('\'')[1]
-			print(sentence_id)
+			# print(sentence_id)
 
 
 		elif(pattern_end.match(line)):
 			extract_unknown_dependencies()
 			print_unknown_dependencies()
-			print('<end>')
+			# print('<end>')
 			heads_name.clear()
 			word_data.clear()
 			unknown_dependencies_name.clear()
