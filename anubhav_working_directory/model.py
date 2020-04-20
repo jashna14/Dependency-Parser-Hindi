@@ -3,7 +3,8 @@ import re
 import json
 import numpy as np
 from scipy.sparse import csr_matrix
-from scikits.learn.svm.sparse import SVC
+from sklearn.svm import LinearSVC
+import pickle
 
 with open('data_lists.json','r') as f:
 	data = json.load(f)
@@ -52,9 +53,6 @@ with open(sys.argv[1], 'r') as f:
 				data.append(1)
 				data.append(1)
 				data.append(1)
-				# arr[words.index(a1[1])] = 1
-				# arr[tags.index(a1[4]) + len(words)] = 1
-				# arr[chunk_tags.index(a1[3]) + len(words) + len(tags)] = 1
 
 			elif(a1[0] == 'ROOT'):
 				row.append(li -1)
@@ -66,9 +64,6 @@ with open(sys.argv[1], 'r') as f:
 				data.append(1)
 				data.append(1)
 				data.append(1)
-				# arr[words.index('ROOT')] = 1
-				# arr[tags.index('ROOT') + len(words)] = 1
-				# arr[chunk_tags.index('ROOT') + len(words) + len(tags)] = 1
 
 			z = len(words) + len(tags) + len(chunk_tags)
 			row.append(li -1)
@@ -80,14 +75,12 @@ with open(sys.argv[1], 'r') as f:
 			data.append(1)
 			data.append(1)
 			data.append(1)
-			# arr[z + words.index(a2[2])] = 1
-			# arr[z + tags.index(a2[5]) + len(words)] = 1
-			# arr[z + chunk_tags.index(a2[4]) + len(words) + len(tags)] = 1
 
-			# X.append(arr.astype(int))
+
 			Y.append(a3[1])
 
-
 X = csr_matrix((data, (row, column)))
-clf = SVC()
+clf = LinearSVC()
 clf.fit(X, Y)
+
+pickle.dump(clf, open('finalised_model.sav', 'wb'))
