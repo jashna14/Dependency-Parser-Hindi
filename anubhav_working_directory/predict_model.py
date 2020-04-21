@@ -10,7 +10,7 @@ from sklearn.metrics import confusion_matrix
 import pickle
 from sklearn import preprocessing
 from sklearn.metrics import recall_score
-
+from sklearn.metrics import f1_score
 with open('data_lists.json','r') as f:
 	data = json.load(f)
 
@@ -93,8 +93,36 @@ Y_one=preprocessing.label_binarize(Y, classes=['L','R','U'])
 k=precision_recall_fscore_support(Y,z,average='macro')
 k2=confusion_matrix(Y,z)
 k3=average_precision_score(Y_one,z_one)
-k4=recall_score(Y_one, z_one, average='macro')
-print(k4)
+k4=recall_score(Y_one, z_one, average='weighted')
+k5=f1_score(Y,z, average='micro')
+out_L=0
+out_R=0
+out_U=0
+inp_L=0
+inp_R=0
+inp_U=0
+for i in z:
+	if i=='L':
+		out_L+=1
+	elif i=='R':
+		out_R+=1
+	elif i=='U':
+		out_U+=1
+for i in Y:
+	if i=='L':
+		inp_L+=1
+	elif i=='R':
+		inp_R+=1
+	elif i=='U':
+		inp_U+=1
+
+print(inp_L)
+print(inp_R)
+print(inp_U)
+print(out_L)
+print(out_R)
+print(out_U)
+#print(k5)
 
 #print(Y)
 #print(len(z))
