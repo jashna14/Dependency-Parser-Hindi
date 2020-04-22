@@ -136,4 +136,5 @@ for i in range(len(z)):
 	if(Y[i] != z[i]):
 		cnt += 1
 
-print(cnt)		
+print(cnt)
+#https://docs.google.com/document/d/1BDMr4DNS91t099pqqdVlJc2wgO75_djM_nMaXM9bdVg/edit#	
