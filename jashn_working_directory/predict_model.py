@@ -84,12 +84,35 @@ X = csr_matrix((data, (row, column)))
 loaded_model = pickle.load(open('finalised_model.sav', 'rb'))
 z = loaded_model.predict(X)
 
-print(len(Y))
-print(len(z))
 
+iu = 0
+pu = 0
+il = 0
+pl = 0
+ir = 0
+pr = 0
 cnt = 0
 for i in range(len(Y)):
+	if(Y[i] == 'L'):
+		il +=1
+	if(Y[i] == 'R'):
+		ir +=1
+	if(Y[i] == 'U'):
+		iu +=1		
 	if(Y[i] != z[i]):
+		if(Y[i] == 'L'):
+			pl +=1
+		if(Y[i] == 'R'):
+			pr +=1
+		if(Y[i] == 'U'):
+			pu +=1
 		cnt += 1
 
-print(cnt)		
+print('*****************')
+print(cnt/len(Y))
+print('*****************')
+print(pl/il)
+print('*****************')
+print(pr/ir)
+print('*****************')
+print(pu/iu)
