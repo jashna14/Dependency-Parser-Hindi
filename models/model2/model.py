@@ -89,4 +89,4 @@ X = csr_matrix((data, (row, column)))
 clf = LinearSVC()
 clf.fit(X, Y)
 
-pickle.dump(clf, open('finalised_model_anubhav.sav', 'wb'))
+pickle.dump(clf, open('finalised_model.sav', 'wb'))
