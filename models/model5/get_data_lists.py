@@ -18,6 +18,7 @@ with open(sys.argv[1], 'r') as f:
 
 			a1 = line1[0].split(' ')
 			a2 = line1[1].split(' ')
+			a3 = line1[2].split(' ')
 
 			if(a1[0] == 'H'):
 				if a1[1] not in words:
@@ -40,10 +41,10 @@ with open(sys.argv[1], 'r') as f:
 				tags.append(a2[5])	
 
 
-print(len(words))					
-print(len(root))					
-print(len(tags))					
-print(len(chunk_tags))
+# print(len(words))					
+# print(len(root))					
+# print(len(tags))					
+# print(len(chunk_tags))
 
 words.append('ROOT')
 root.append('ROOT')
