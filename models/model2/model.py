@@ -32,12 +32,9 @@ Y = []
 li = 0
 with open(sys.argv[1], 'r') as f:
 	for line in f:
-		#li += 1
-		#print(li)
 		if(line.rstrip()):
 			line = re.sub('\s+',' ',line)
 			line1 = line.split(';')
-			arr = np.zeros((2*(words_len+tags_len+chunk_tags_len)))
 
 			a1 = line1[0].split(' ')
 			a2 = line1[1].split(' ')
@@ -47,7 +44,7 @@ with open(sys.argv[1], 'r') as f:
 
 			if a3[1] != 'U':
 				li += 1
-				print(li)
+				# print(li)
 
 				if(a1[0] == 'H'):
 					row.append(li -1)
@@ -85,7 +82,7 @@ with open(sys.argv[1], 'r') as f:
 
 				Y.append(a4)
 
-X = csr_matrix((data, (row, column)))
+X = csr_matrix((data, (row, column)) , shape=(li,2*(words_len+tags_len+chunk_tags_len)))
 clf = LinearSVC()
 clf.fit(X, Y)
 

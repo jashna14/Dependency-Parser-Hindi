@@ -71,7 +71,6 @@ with open(sys.argv[1], 'r') as f:
 		if(line.rstrip()):
 			line = re.sub('\s+',' ',line)
 			line1 = line.split(';')
-			arr = np.zeros((2*(words_len+tags_len+chunk_tags_len)))
 
 			a1 = line1[0].split(' ')
 			a2 = line1[1].split(' ')
@@ -118,48 +117,21 @@ with open(sys.argv[1], 'r') as f:
 
 				Y.append(a4)
 
-X = csr_matrix((data, (row, column)))
+X = csr_matrix((data, (row, column)) , shape=(li,2*(words_len+tags_len+chunk_tags_len)))
+
 
 loaded_model = pickle.load(open('finalised_model.sav', 'rb'))
 z = loaded_model.predict(X)
 
-# out_L=0
-# out_R=0
-# out_U=0
-# inp_L=0
-# inp_R=0
-# inp_U=0
-# for i in z:
-# 	if i=='L':
-# 		out_L+=1
-# 	elif i=='R':
-# 		out_R+=1
-# 	elif i=='U':
-# 		out_U+=1
-# for i in Y:
-# 	if i=='L':
-# 		inp_L+=1
-# 	elif i=='R':
-# 		inp_R+=1
-# 	elif i=='U':
-# 		inp_U+=1
-
-# print(inp_L)
-# print(inp_R)
-# print(inp_U)
-# print(out_L)
-# print(out_R)
-# print(out_U)
-
-for i in range(10):
-	answer=metric_analysis(i,Y,z)
-	print(answer)
-
-
+print(len(Y))
 cnt = 0
-for i in range(len(z)):
+for i in range(len(Y)):
 	if(Y[i] != z[i]):
 		cnt += 1
 
-#print(cnt)
-#https://docs.google.com/document/d/1BDMr4DNS91t099pqqdVlJc2wgO75_djM_nMaXM9bdVg/edit#	
+print(cnt)		
+
+
+# for i in range(10):
+# 	answer=metric_analysis(i,Y,z)
+# 	print(answer)

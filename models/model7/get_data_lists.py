@@ -6,6 +6,7 @@ words = []
 root = []
 tags = []
 chunk_tags = []
+psp = []
 
 li = 0
 with open(sys.argv[1], 'r') as f:
@@ -28,6 +29,8 @@ with open(sys.argv[1], 'r') as f:
 					chunk_tags.append(a1[3])
 				if a1[4] not in tags:
 					tags.append(a1[4])
+				if a1[8] not in psp:
+					psp.append(a1[8])	
 
 			
 			if a2[2] not in words:
@@ -38,12 +41,16 @@ with open(sys.argv[1], 'r') as f:
 				chunk_tags.append(a2[4])
 			if a2[5] not in tags:
 				tags.append(a2[5])	
+			if a2[9] not in psp:
+				psp.append(a2[9])	
 
 
-# print(len(words))					
-# print(len(root))					
-# print(len(tags))					
-# print(len(chunk_tags))
+print(len(words))					
+print(len(root))					
+print(len(tags))					
+print(len(chunk_tags))
+print(len(psp))
+print(psp)
 
 words.append('ROOT')
 root.append('ROOT')
@@ -55,6 +62,7 @@ data['words'] = words
 data['root'] = root
 data['tags'] = tags
 data['chunk_tags'] = chunk_tags
+data['psp'] = psp
 
 with open('data_lists.json','w') as f:
 	json.dump(data,f)

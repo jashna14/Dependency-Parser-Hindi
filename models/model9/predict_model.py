@@ -37,11 +37,10 @@ li = 0
 with open(sys.argv[1], 'r') as f:
 	for line in f:
 		li += 1
-		print(li)
+		# print(li)
 		if(line.rstrip()):
 			line = re.sub('\s+',' ',line)
 			line1 = line.split(';')
-			arr = np.zeros((2*(words_len+tags_len+chunk_tags_len+psps_len)))
 
 			a1 = line1[0].split(' ')
 			a2 = line1[1].split(' ')
@@ -92,7 +91,8 @@ with open(sys.argv[1], 'r') as f:
 
 			Y.append(a3[1])
 
-X = csr_matrix((data, (row, column)))
+X = csr_matrix((data, (row, column)) , shape=(li,2*(words_len+tags_len+chunk_tags_len+psps_len)))
+
 
 loaded_model = pickle.load(open('finalised_model.sav', 'rb'))
 z = loaded_model.predict(X)
