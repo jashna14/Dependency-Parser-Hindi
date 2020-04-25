@@ -4,7 +4,41 @@ import json
 import numpy as np
 from scipy.sparse import csr_matrix
 from sklearn.svm import LinearSVC
+from sklearn.metrics import precision_recall_fscore_support
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
 import pickle
+
+def metric_analysis(k,Y,z):
+	if k==0:
+		ans=recall_score(Y, z, average='macro')
+	elif k==1:
+		ans=recall_score(Y, z, average='micro')
+	elif k==2:
+		ans=recall_score(Y, z, average='weighted')
+
+	elif k==3:
+		ans=f1_score(Y,z, average='macro')
+	elif k==4:
+		ans=f1_score(Y,z, average='micro')
+	elif k==5:
+		ans=f1_score(Y,z, average='weighted')
+
+	elif k==6:
+		ans=precision_score(Y,z, average='macro')
+	elif k==7:
+		ans=precision_score(Y,z, average='micro')
+	elif k==8:
+		ans=precision_score(Y,z, average='weighted')
+
+	elif k==9:
+		ans=confusion_matrix(Y,z)
+
+	return ans
+
+
 
 with open('data_lists.json','r') as f:
 	data = json.load(f)
@@ -33,7 +67,7 @@ li = 0
 with open(sys.argv[1], 'r') as f:
 	for line in f:
 		li += 1
-		print(li)
+		#print(li)
 		if(line.rstrip()):
 			line = re.sub('\s+',' ',line)
 			line1 = line.split(';')
@@ -108,11 +142,15 @@ for i in range(len(Y)):
 			pu +=1
 		cnt += 1
 
-print('*****************')
-print(cnt/len(Y))
-print('*****************')
-print(pl/il)
-print('*****************')
-print(pr/ir)
-print('*****************')
-print(pu/iu)
+# print('*****************')
+# print(cnt/len(Y))
+# print('*****************')
+# print(pl/il)
+# print('*****************')
+# print(pr/ir)
+# print('*****************')
+# print(pu/iu)
+
+for i in range(10):
+	answer=metric_analysis(i,Y,z)
+	print(answer)
