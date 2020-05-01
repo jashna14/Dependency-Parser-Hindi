@@ -108,3 +108,9 @@ for i in range(len(Y)):
 		cnt += 1
 
 print(cnt)		
+cnt = 0
+for i in range(len(Y)):
+	if(Y[i] != z[i]):
+		cnt += 1
+
+print(((len(Y)-cnt)/len(Y))*100)

@@ -45,12 +45,12 @@ with open(sys.argv[1], 'r') as f:
 				psp.append(a2[9])	
 
 
-print(len(words))					
-print(len(root))					
-print(len(tags))					
-print(len(chunk_tags))
-print(len(psp))
-print(psp)
+# print(len(words))					
+# print(len(root))					
+# print(len(tags))					
+# print(len(chunk_tags))
+# print(len(psp))
+# print(psp)
 
 words.append('ROOT')
 root.append('ROOT')

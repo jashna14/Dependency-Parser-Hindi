@@ -76,6 +76,7 @@ def extract_unknown_dependencies():
 							unknown_dependencies_name.append(pair)
 
 			else:
+				# for BLK and ROOT(for ex. 'vgf')
 				dependent_index = heads_name.index(dependency[1])
 				cnt = 0
 				for i in range(dependent_index-1 , -1 , -1):
@@ -93,6 +94,26 @@ def extract_unknown_dependencies():
 						cnt += 1
 					if(cnt == 2):
 						break
+
+				# for ROOT 
+				if(dependency[0] != 'ROOT'):
+					dependent_index = heads_name.index(dependency[1])
+					cnt = 0
+					for i in range(dependent_index-1 , -1 , -1):
+						pair = ['ROOT',heads_name[i]]
+						if(pair not in unknown_dependencies_name and pair not in tags_pair):
+							unknown_dependencies_name.append(pair)
+							cnt += 1
+						if(cnt == 2):
+							break
+					cnt = 0
+					for i in range(0 , dependent_index-1):
+						pair = ['ROOT',heads_name[i]]
+						if(pair not in unknown_dependencies_name and pair not in tags_pair):
+							unknown_dependencies_name.append(pair)
+							cnt += 1
+						if(cnt == 2):
+							break 
 
 def print_unknown_dependencies():
 	for dependency in unknown_dependencies_name:
@@ -119,13 +140,13 @@ with open(sys.argv[1], 'r') as f:
 		if(pattern_start.match(line)):
 			line_number = 0
 			sentence_id = line.split('\'')[1]
-			print(sentence_id)
+			# print(sentence_id)
 
 
 		elif(pattern_end.match(line)):
 			extract_unknown_dependencies()
 			print_unknown_dependencies()
-			print('<end>')
+			# print('<end>')
 			heads_name.clear()
 			word_data.clear()
 			unknown_dependencies_name.clear()
@@ -161,12 +182,18 @@ with open(sys.argv[1], 'r') as f:
 		elif(pattern_root.match(line)):
 			print(line)
 			line_state = []
+			line_state_pairs = []
 			line1 = line.split(';')
 			line_state.append('ROOT')
+			line_state_pairs.append('ROOT')
 			line_state.append(line1[1].split(' ')[6])
+			line_state_pairs.append(line1[1].split(' ')[6])
 			line_state.append('L')
 
-			tags.append(line_state)	
+			tags.append(line_state)
+			tags_pair.append(line_state_pairs)
 
+			if(line_state[0] not in word_data):
+				word_data[line_state[0]] = line1[0]	
 			if(line_state[1] not in word_data):
 				word_data[line_state[1]] = line1[1]	

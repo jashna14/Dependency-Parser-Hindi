@@ -135,3 +135,9 @@ print(cnt)
 # for i in range(10):
 # 	answer=metric_analysis(i,Y,z)
 # 	print(answer)
+cnt = 0
+for i in range(len(Y)):
+	if(Y[i] != z[i]):
+		cnt += 1
+
+print(((len(Y)-cnt)/len(Y))*100)
