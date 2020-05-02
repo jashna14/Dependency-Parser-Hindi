@@ -15,13 +15,14 @@ from sklearn.metrics import f1_score
 
 
 def metric_analysis(k,Y,z):
-	if k==0:
+	ans=0
+	if k==111:
 		ans=recall_score(Y, z, average='macro')
 		print("recall score for averaged as macro : {}".format(ans))
 	elif k==1:
 		ans=recall_score(Y, z, average='micro')
 		print("recall score for averaged as micro : {}".format(ans))
-	elif k==2:
+	elif k==200:
 		ans=recall_score(Y, z, average='weighted')
 		print("recall score for averaged as weighted : {}".format(ans))
 
@@ -35,14 +36,14 @@ def metric_analysis(k,Y,z):
 		ans=f1_score(Y,z, average='weighted')
 		print("f1_score for average as weighted : {}".format(ans))
 
-	elif k==6:
+	elif k==600:
 		ans=precision_score(Y,z, average='macro')
 		print("precision for average as macro : {}".format(ans))
 	elif k==7:
 		ans=precision_score(Y,z, average='micro')
 		print("precision for average as micro : {}".format(ans))
 
-	elif k==8:
+	elif k==800:
 		ans=precision_score(Y,z, average='weighted')
 		print("precision for average as weighted : {}".format(ans))
 
