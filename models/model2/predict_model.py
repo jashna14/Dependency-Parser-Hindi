@@ -17,27 +17,40 @@ from sklearn.metrics import f1_score
 def metric_analysis(k,Y,z):
 	if k==0:
 		ans=recall_score(Y, z, average='macro')
+		print("recall score for averaged as macro : {}".format(ans))
 	elif k==1:
 		ans=recall_score(Y, z, average='micro')
+		print("recall score for averaged as micro : {}".format(ans))
 	elif k==2:
 		ans=recall_score(Y, z, average='weighted')
+		print("recall score for averaged as weighted : {}".format(ans))
 
 	elif k==3:
 		ans=f1_score(Y,z, average='macro')
+		print("f1_score for average as macro : {}".format(ans))
 	elif k==4:
 		ans=f1_score(Y,z, average='micro')
+		print("f1_score for average as micro : {}".format(ans))
 	elif k==5:
 		ans=f1_score(Y,z, average='weighted')
+		print("f1_score for average as weighted : {}".format(ans))
 
 	elif k==6:
 		ans=precision_score(Y,z, average='macro')
+		print("precision for average as macro : {}".format(ans))
 	elif k==7:
 		ans=precision_score(Y,z, average='micro')
+		print("precision for average as micro : {}".format(ans))
+
 	elif k==8:
 		ans=precision_score(Y,z, average='weighted')
+		print("precision for average as weighted : {}".format(ans))
 
 	elif k==9:
 		ans=confusion_matrix(Y,z)
+		print("Confusion matrix is ")
+		print(ans)
+
 
 	return ans
 
@@ -123,21 +136,21 @@ X = csr_matrix((data, (row, column)) , shape=(li,2*(words_len+tags_len+chunk_tag
 loaded_model = pickle.load(open('finalised_model.sav', 'rb'))
 z = loaded_model.predict(X)
 
-print(len(Y))
-cnt = 0
-for i in range(len(Y)):
-	if(Y[i] != z[i]):
-		cnt += 1
+# print(len(Y))
+# cnt = 0
+# for i in range(len(Y)):
+# 	if(Y[i] != z[i]):
+# 		cnt += 1
 
-print(cnt)		
+# print(cnt)		
 
 
-# for i in range(10):
-# 	answer=metric_analysis(i,Y,z)
-# 	print(answer)
-cnt = 0
-for i in range(len(Y)):
-	if(Y[i] != z[i]):
-		cnt += 1
+for i in range(10):
+	answer=metric_analysis(i,Y,z)
 
-print(((len(Y)-cnt)/len(Y))*100)
+# cnt = 0
+# for i in range(len(Y)):
+# 	if(Y[i] != z[i]):
+# 		cnt += 1
+
+# print(((len(Y)-cnt)/len(Y))*100)

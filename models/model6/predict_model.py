@@ -13,6 +13,45 @@ from sklearn import preprocessing
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 
+def metric_analysis(k,Y,z):
+	if k==0:
+		ans=recall_score(Y, z, average='macro')
+		print("recall score for averaged as macro : {}".format(ans))
+	elif k==1:
+		ans=recall_score(Y, z, average='micro')
+		print("recall score for averaged as micro : {}".format(ans))
+	elif k==2:
+		ans=recall_score(Y, z, average='weighted')
+		print("recall score for averaged as weighted : {}".format(ans))
+
+	elif k==3:
+		ans=f1_score(Y,z, average='macro')
+		print("f1_score for average as macro : {}".format(ans))
+	elif k==4:
+		ans=f1_score(Y,z, average='micro')
+		print("f1_score for average as micro : {}".format(ans))
+	elif k==5:
+		ans=f1_score(Y,z, average='weighted')
+		print("f1_score for average as weighted : {}".format(ans))
+
+	elif k==6:
+		ans=precision_score(Y,z, average='macro')
+		print("precision for average as macro : {}".format(ans))
+	elif k==7:
+		ans=precision_score(Y,z, average='micro')
+		print("precision for average as micro : {}".format(ans))
+
+	elif k==8:
+		ans=precision_score(Y,z, average='weighted')
+		print("precision for average as weighted : {}".format(ans))
+
+	elif k==9:
+		ans=confusion_matrix(Y,z)
+		print("Confusion matrix is ")
+		print(ans)
+
+	return ans
+
 with open('data_lists.json','r') as f:
 	data = json.load(f)
 
@@ -66,11 +105,9 @@ X = csr_matrix((data, (row, column)) , shape=(li,2*words_len))
 
 loaded_model = pickle.load(open('finalised_model.sav', 'rb'))
 z = loaded_model.predict(X)
-# k=precision_recall_fscore_support(Y,z,average='macro')
-#k2=confusion_matrix(Y,z)
-#k3=precision_score(Y,z,average='macro')
-k4=recall_score(Y, z, average='weighted')
-#k5=f1_score(Y,z, average='micro')
+
+for i in range(10):
+	answer=metric_analysis(i,Y,z)
 # out_L=0
 # out_R=0
 # out_U=0
@@ -98,22 +135,21 @@ k4=recall_score(Y, z, average='weighted')
 # print(out_L)
 # print(out_R)
 # print(out_U)
-print(k4)
 
 #print(Y)
 #print(len(z))
 
-cnt = 0
-for i in range(len(z)):
-	if(Y[i] != z[i]):
-		cnt += 1
+# cnt = 0
+# for i in range(len(z)):
+# 	if(Y[i] != z[i]):
+# 		cnt += 1
 
-print(cnt)
-#https://docs.google.com/document/d/1BDMr4DNS91t099pqqdVlJc2wgO75_djM_nMaXM9bdVg/edit#	
+# print(cnt)
 
-cnt = 0
-for i in range(len(Y)):
-	if(Y[i] != z[i]):
-		cnt += 1
 
-print(((len(Y)-cnt)/len(Y))*100)
+# cnt = 0
+# for i in range(len(Y)):
+# 	if(Y[i] != z[i]):
+# 		cnt += 1
+
+# print(((len(Y)-cnt)/len(Y))*100)
