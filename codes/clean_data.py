@@ -1,5 +1,6 @@
 NULL_index = []
 
+
 import sys
 import re
 

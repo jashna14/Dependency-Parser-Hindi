@@ -143,4 +143,4 @@ with open(sys.argv[1], 'r') as f:
 # remove all sentences with possible chunks with head as NEGP having no NEG
 # remove all sentences with possible chunks with head as FRAGP
 # remove all sentences with possible chunks with head as VGF having no VM
-# remove all senteces with missing word i.e having pos as NULL__x
+# remove all sentences with missing word i.e having pos as NULL__x

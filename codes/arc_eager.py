@@ -104,9 +104,9 @@ def dependency_link():
 def is_parsable():
 	while(not(len(stack) == 1 and len(buffer) == 1)):
 
-		print(stack[len(stack) - 1],end=' ')
-		if(len(buffer) > 0):
-			print(buffer[len(buffer) - 1])
+		# print(stack[len(stack) - 1],end=' ')
+		# if(len(buffer) > 0):
+			# print(buffer[len(buffer) - 1])
 		
 		if(len(buffer) > 1 and len(stack) > 0):
 			orignal_dependency,relation = check_orignal_dependencies()
@@ -119,22 +119,22 @@ def is_parsable():
 						can_reduce2 = check_reduce()
 						if(can_reduce2 == 1):
 							reduce()
-							print('reduce')
+							# print('reduce')
 						else:
 							return 0	
 					else:
 						shift()
-						print('shift')
+						# print('shift')
 				else:
 					shift()
-					print('shift')								
+					# print('shift')								
 
 
 			elif(orignal_dependency == 'L'):
 				can_right_arc = check_right_arc()
 				if(can_right_arc):
 					right_arc(relation)
-					print('right_arc')
+					# print('right_arc')
 				else:
 					return 0
 
@@ -142,7 +142,7 @@ def is_parsable():
 				can_left_arc = check_left_arc()
 				if(can_left_arc):
 					left_arc(relation)
-					print('left_arc')
+					# print('left_arc')
 				else:
 					return 0
 
@@ -150,7 +150,7 @@ def is_parsable():
 			can_reduce = check_reduce()
 			if(can_reduce):
 				reduce()
-				print('reduce')
+				# print('reduce')
 			else:
 				return 0
 
@@ -176,7 +176,7 @@ with open(sys.argv[1], 'r') as f:
 		if(pattern_start.match(line)):
 			line_number = 0
 			sentence_id = line.split('\'')[1]
-			print(sentence_id)
+			# print(sentence_id)
 
 
 		elif(pattern_head.match(line)):
@@ -216,14 +216,15 @@ with open(sys.argv[1], 'r') as f:
 			flag = is_parsable()
 
 			if(flag == 1):
-				print('parsable')
+				# print('parsable')
+				a = 1
 			else:
-				print('Not parsable')
+				# print('Not parsable')
 				not_parasble_sentences.append(sentence_id)
 				count+=1
 
 
-			print(dependencies)	
+			# print(dependencies)	
 
 			flagki = 0	
 			tags.clear()
@@ -231,8 +232,8 @@ with open(sys.argv[1], 'r') as f:
 			buffer.clear()
 			dependencies.clear()	
 
-print(count)
+# print(count)
 print(not_parasble_sentences)
-print(len(not_parasble_sentences))
+# print(len(not_parasble_sentences))
         	
 
